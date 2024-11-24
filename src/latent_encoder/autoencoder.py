@@ -7,7 +7,7 @@ from contextlib import contextmanager
 import numpy as np
 from latent_diffusion.modules.ema import *
 
-from taming.modules.vqvae.quantize import VectorQuantizer2 as VectorQuantizer
+from taming.modules.vqvae.quantize import VectorQuantizer as VectorQuantizer
 from torch.optim.lr_scheduler import LambdaLR
 from latent_diffusion.modules.diffusionmodules.model import Encoder, Decoder
 from latent_diffusion.modules.distributions.distributions import (
