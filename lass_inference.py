@@ -132,7 +132,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "-m",
         "--no_mixed",
-        type=bool,
         action='store_false',
         help="saving the mixed waveform as well",
     )
@@ -140,7 +139,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
     # torch._dynamo.config.suppress_errors = True
 
-    assert torch.cuda.is_available(), "CUDA is not available"
+    assert not torch.cuda.is_available(), "CUDA is not available"
+
+    device = torch.device("cpu")
 
     config_yaml = args.config_yaml
 
