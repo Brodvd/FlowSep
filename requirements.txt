@@ -1,0 +1,6 @@
+ipdb
+wandb
+einops
+librosa==0.9.1
+timm
+taming-transformers
