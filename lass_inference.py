@@ -61,11 +61,11 @@ def main(configs, exp_group_name, exp_name,text,wav):
         batch["fname"] = [cur_wav]
         batch["text"] = [cur_text]
         batch["caption"] = [cur_text]
-        batch["waveform"] = torch.rand(1,1,163840).cuda()
-        batch["log_mel_spec"] = torch.rand(1,1024,64).cuda()
-        batch["sampling_rate"] = torch.tensor([16000]).cuda()
-        batch["label_vector"] = torch.rand(1,527).cuda()
-        batch["stft"] = torch.rand(1,1024,512).cuda()
+        batch["waveform"] = torch.rand(1,1,163840).to("cpu")
+        batch["log_mel_spec"] = torch.rand(1,1024,64).to("cpu")
+        batch["sampling_rate"] = torch.tensor([16000]).to("cpu")
+        batch["label_vector"] = torch.rand(1,527).to("cpu")
+        batch["stft"] = torch.rand(1,1024,512).to("cpu")
         noise_waveform, random_start = val_dataset.read_wav_file(cur_wav)
 
         noise_waveform = noise_waveform[0][:163840]
