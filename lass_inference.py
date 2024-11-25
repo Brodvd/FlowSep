@@ -109,7 +109,7 @@ if __name__ == "__main__":
         "-a",
         "--audio",
         type=str,
-        default="metadata-master/mixed/exp1_A rocket flies by followed by a loud explosion and fire crackling as a truck engine runs idle_mixture.wav",
+        default="lass_result/mixed/exp1_A rocket flies by followed by a loud explosion and fire crackling as a truck engine runs idle_mixture.wav",
         help="path to config .yaml file",
     )
     parser.add_argument(
