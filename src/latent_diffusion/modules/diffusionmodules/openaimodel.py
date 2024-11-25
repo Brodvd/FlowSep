@@ -99,15 +99,15 @@ class TimestepEmbedSequential(nn.Sequential, TimestepBlock):
                     else:
                         context, mask = context_list[spatial_transformer_id], mask_list[spatial_transformer_id]
                     try:
-                        context = context.to("cuda")
+                        context = context.to("cpu")
                     except:
                         pass
                     try:
-                        mask = mask.to("cuda")
+                        mask = mask.to("cpu")
                     except:
                         pass
                     try:
-                        x = layer(x.to("cuda"), context, mask=mask)  # shape is torch.Size([1, 256, 128, 8])
+                        x = layer(x.to("cpu"), context, mask=mask)  # shape is torch.Size([1, 256, 128, 8])
                     except:
                         ipdb.set_trace()
                     spatial_transformer_id += 1
