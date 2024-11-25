@@ -42,7 +42,7 @@ def main(configs, exp_group_name, exp_name,text,wav):
 
     val_dataset = AudioDataset(configs, split="test", add_ons=[])
 
-    latent_diffusion = instantiate_from_config(configs["model"]).to("cuda")
+    latent_diffusion = instantiate_from_config(configs["model"]).to("cpu")
 
     resume_from_checkpoint = args.load_checkpoint
     if resume_from_checkpoint is not None:
