@@ -140,7 +140,6 @@ if __name__ == "__main__":
     # torch._dynamo.config.suppress_errors = True
 
     assert not torch.cuda.is_available(), "CUDA is not available"
-
     device = torch.device("cpu")
 
     config_yaml = args.config_yaml
