@@ -47,7 +47,7 @@ def get_vocoder(config, device, mel_bins):
     config = bigvgan.AttrDict(config)
     vocoder = bigvgan.BigVGAN(config)
     print("Load bigvgan_generator_16k")
-    ckpt = torch.load("src/bigvgan/g_01000000")
+    ckpt = torch.load("src/bigvgan/g_01000000", map_location=torch.device('cpu')) # add , map_location=torch.device('cpu')
     vocoder.load_state_dict(ckpt["generator"])
     vocoder.eval()
     vocoder.remove_weight_norm()
