@@ -78,4 +78,6 @@ If you found this tool useful, please consider citing
   year={2024}
 }
 ```
+https://www.aimodels.fyi/papers/arxiv/flowsep-language-queried-sound-separation-rectified-flow
+
 
