@@ -78,6 +78,10 @@ If you found this tool useful, please consider citing
   year={2024}
 }
 ```
+# Notebook 
+## Links
 https://www.aimodels.fyi/papers/arxiv/flowsep-language-queried-sound-separation-rectified-flow
-
+## valutation
+* Good separation respect Audio Sep
+* good separation but if the patterns are the same they won't be separated
 
